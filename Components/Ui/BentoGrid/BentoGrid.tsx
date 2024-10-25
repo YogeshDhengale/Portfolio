@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
 import animationData from "@/Data/Confetti.json";
@@ -55,6 +55,7 @@ export const BentoGridItem = ({
   const rightLists = ["React Native", "Next.js", "MongoDB", "Three.Js"];
 
   const [copied, setCopied] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const defaultOptions = {
     loop: copied,
@@ -67,8 +68,21 @@ export const BentoGridItem = ({
 
   const handleCopy = () => {
     const text = "yogesh.dhengale15@gmail.com";
-    navigator.clipboard.writeText(text);
-    setCopied(true);
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        setCopied(true);
+
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+        }
+
+        timeoutRef.current = setTimeout(() => {
+          setCopied(false);
+          timeoutRef.current = null;
+        }, 5000);
+      })
+      .catch((error) => console.error("Failed to copy text:", error));
   };
 
   return (
