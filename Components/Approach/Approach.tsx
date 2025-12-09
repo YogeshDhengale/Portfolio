@@ -2,7 +2,6 @@ import React from "react";
 import { InfiniteSlider } from "../Ui/infinite-slider";
 import { projectImages } from "@/Data/Index";
 import Image from "next/image";
-import { FaChevronCircleRight } from "react-icons/fa";
 
 function Approach() {
   return (
