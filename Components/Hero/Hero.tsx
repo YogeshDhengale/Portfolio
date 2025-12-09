@@ -1,39 +1,66 @@
+import Image from "next/image";
 import React from "react";
-import { FaLocationArrow } from "react-icons/fa";
-import Spotlights from "../Spotlights/Spotlights";
-import Button from "../Ui/Buttons/Button";
-import TextGenerateEffect from "../Ui/TextGenerateEffect/TextGenerateEffect";
+import { InView } from "../Ui/in-view";
+import Link from "../Ui/Link";
+import { FaDownload } from "react-icons/fa";
 
 function Hero() {
   return (
-    <div className="pb-20 pt-36">
-      <Spotlights />
-      <div className="h-screen w-full bg-app dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
-       absolute top-0 left-0 flex-center">
-        <div className="absolute pointer-events-none inset-0 flex-center bg-app [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-      </div>
-
-      <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89dvw] md:max-w-2xl lg:max-w-[60dvw] flex-center flex-col">
-          <h3 className="tracking-widest uppercase text-xs text-center text-blue-100 max-w-80">
-            Let&apos;s build something incredible together!
-          </h3>
-          <TextGenerateEffect
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Crafting Immersive Digital Experiences with 3D Design and Tailored Web Solutions."
-          />
-          <p className="text-center md:tracking-wider mb-6 text-sm md:text-lg lg:text-2xl">
-            Hi I&apos;m Yogesh a Software Engineer based in Pune, India
-          </p>
-          <a href="#about">
-            <Button icon={<FaLocationArrow />} position="right">
-              Show my work
-            </Button>
-          </a>
-        </div>
-      </div>
-
-
+    <div className="pb-10 pt-36">
+      <InView
+        variants={{
+          hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
+          visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+        }}
+        viewOptions={{ margin: "0px 0px -200px 0px", once: true }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        <>
+          <div className="flex gap-4 items-center mb-6">
+            <div className="size-16 rounded-md overflow-hidden relative shadow-sm outline outline-4 outline-sky-700/30">
+              <Image
+                src="/yogesh.jpg"
+                width={64}
+                height={64}
+                alt="yogesh"
+                className="absolute -top-4"
+              />
+            </div>
+            <div>
+              <p className="text-lg font-semibold">Yogesh Dhengale</p>
+              <p className="text-base text-muted-foreground">
+                Software Engineer
+              </p>
+            </div>
+          </div>
+          <div className="mt-10">
+            <h1 className="font-bold text-2xl mb-3 leading-tight">
+              Software Engineer — Building Scalable Web & Mobile Apps
+            </h1>
+            <p className="text-base text-muted-foreground">
+              I build magical user interfaces using{" "}
+              <strong>
+                React.js, Next.js, React Native, JavaScript, TypeScript, and a
+                sprinkle of AWS + CI/CD
+              </strong>
+              . From wireframes to pixel-perfect screens, I turn ideas into
+              interactive experiences that feel alive. UI isn’t just a layer for
+              me — it’s the emotional connection users feel with the product.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mt-6">
+            <Link
+              href="mailto:yogesh.dhengale15@gmail.com?subject=Hiring%20Inquiry&body=Hi%20Yogesh"
+              className="col-span-1"
+            >
+              Hire Me
+            </Link>
+            <Link href="/resume.pdf" variant={"outline"} download className="col-span-1">
+              <FaDownload /> Download Resume
+            </Link>
+          </div>
+        </>
+      </InView>
     </div>
   );
 }

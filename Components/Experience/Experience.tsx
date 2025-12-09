@@ -1,50 +1,86 @@
 import { workExperience } from "@/Data/Index";
 import React from "react";
-import MovingBorderCard from "../Ui/MovingBorderCard/MovingBorderCard";
+import Image from "next/image";
+import { cn } from "@/Lib/Utils";
+import { InView } from "../Ui/in-view";
+
+const formatBold = (text: string) => {
+  return text.replace(/\*(.*?)\*/g, "<strong>$1</strong>");
+};
 
 function Experience() {
   return (
-    <section id="experience">
-      <div className="w-full py-20">
-        <h1 className="heading">
-          My <span className="text-purple">work experience</span>
-        </h1>
-        <div className="w-full mt-12 lg:grid-cols-4 grid gid-cols-1 gap-10">
-          {workExperience.map((card) => (
-            <MovingBorderCard
-              key={card.id}
-              duration={Math.floor(Math.random() * 10000) + 10000}
-              borderRadius="1.75rem"
-              style={{
-                background: "rgb(4,7,29)",
-                backgroundColor:
-                  "linear-gradient(90deg, rgb(4, 7, 29) 0%, rgb(12, 14, 35) 100%)",
-                borderRadius: `calc(1.75rem* 0.96)`,
-              }}
-              className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
-            >
-              <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-              <img
-                  src={card.thumbnail}
-                  alt={card.thumbnail}
-                  className="lg:w-32 md:w-20 w-16"
-                />
-                <div className="lg:ms-5">
-                  <h1 className="text-start text-xl md:text-2xl font-bold">
-                    {card.title}
-                  </h1>
-                  <p className="text-start text-white mt-1 font-semibold">
-                    {card.company} <span className="italic text-purple">{card.duration}</span>
-                  </p>
-                  <p className="text-start text-white-100 mt-3 font-semibold">
-                    {card.desc}
+    <section id="experience" className="space-y-8 mt-10 py-10">
+      <InView
+        variants={{
+          hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
+          visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+        }}
+        viewOptions={{ margin: "0px 0px -100px 0px", once: true }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+      >
+        <h2 className="font-semibold text-lg text-muted-foreground">
+          My Work Experience
+        </h2>
+      </InView>
+      {workExperience.map((work) => (
+        <InView
+          variants={{
+            hidden: { opacity: 0, y: 100, filter: "blur(7px)" },
+            visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+          }}
+          viewOptions={{ margin: "0px 0px -100px 0px", once: true }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          key={work.id}
+        >
+          <div className="w-full">
+            <div className="flex gap-6 justify-between items-center">
+              <div className="flex gap-4 items-center">
+                <div
+                  className={cn(
+                    "size-16 rounded-md overflow-hidden relative shadow-sm p-3 outline outline-4 border-2",
+                    work.className
+                  )}
+                >
+                  <Image
+                    src={work.logo}
+                    width={64}
+                    height={64}
+                    alt="yogesh"
+                    className="size-full object-contain"
+                  />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold">{work.title}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {work.company}
                   </p>
                 </div>
               </div>
-            </MovingBorderCard>
-          ))}
-        </div>
-      </div>
+              <div>
+                <p className="text-xs font-semibold text-end">
+                  {work.duration}
+                </p>
+                <p className="text-xs text-muted-foreground text-end">
+                  {work.location}
+                </p>
+              </div>
+            </div>
+            <div className="mt-5 rounded-lg p-2 border border-border w-full bg-muted">
+              <div className="p-6 bg-background rounded-md border border-border">
+                <ul className="list-disc pl-4 space-y-3 text-sm text-muted-foreground">
+                  {work.desc.map((point, idx) => (
+                    <li
+                      key={idx}
+                      dangerouslySetInnerHTML={{ __html: formatBold(point) }}
+                    />
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </InView>
+      ))}
     </section>
   );
 }

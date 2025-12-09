@@ -19,7 +19,7 @@ function Button({
     <button
       {...props}
       className={cn(
-        "relative inline-flex h-12 overflow-hidden rounded-full w-full p-[1px] focus:outline-none ",
+        "relative inline-flex h-12 overflow-hidden rounded-full w-full p-[1px] focus:outline-none",
         className
       )}
     >

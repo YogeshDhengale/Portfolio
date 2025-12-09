@@ -1,3 +1,4 @@
+import About from "@/Components/About/About";
 import Approach from "@/Components/Approach/Approach";
 import Experience from "@/Components/Experience/Experience";
 import Footer from "@/Components/Footer/Footer";
@@ -10,12 +11,12 @@ import React from "react";
 
 function Home() {
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-clip mx-auto sm:px-10 px-5">
-      <div className="max-w-7xl w-full">
+    <main className="relative bg-background flex justify-center items-center flex-col overflow-clip mx-auto sm:px-10 px-5">
+      <div className="max-w-3xl w-full">
         <FloatingNav navItems={navItems} />
         <Hero />
-        <Grid />
-        <Projects />
+        {/* <Projects /> */}
+        <About />
         <Experience />
         <Approach />
         <Footer />

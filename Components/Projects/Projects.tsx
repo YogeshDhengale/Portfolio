@@ -22,7 +22,7 @@ function Projects() {
         <div className="flex flex-wrap items-center justify-center p-4 gap-y-8 gap-x-16 mt-10">
           {isMounted && projects.map((item) => (
             <div
-              className="lg:min-h-[27.5rem] h-[25rem] max-h-fit  flex items-center justify-center sm:w-96 w-[80vw]"
+              className="lg:min-h-110 h-100 max-h-fit  flex items-center justify-center sm:w-96 w-[80vw]"
               key={item.id}
             >
               <Link href={item.link} target="_blank">

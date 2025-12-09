@@ -1,55 +1,96 @@
 import React from "react";
-import Button from "../Ui/Buttons/Button";
-import { FaLocationArrow } from "react-icons/fa";
-import { socialMedia } from "@/Data/Index";
-import Image from "next/image";
-import Link from "next/link";
+import Link from "../Ui/Link";
+import { FaDownload, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { InView } from "../Ui/in-view";
+
+const socialMedia = [
+  {
+    id: 1,
+    Icon: FaGithub,
+    link: "https://github.com/YogeshDhengale",
+  },
+  {
+    id: 2,
+    Icon: FaInstagram,
+    link: "https://www.instagram.com/yogesh.dhengale/",
+  },
+  {
+    id: 3,
+    Icon: FaLinkedin,
+    link: "https://linkedin.com/in/yogeshdhengale",
+  },
+];
 
 function Footer() {
   return (
     <footer id="#" className="w-full pt-20 pb-10">
-      <div className="absolute w-full left-0 -bottom-72 min-h-96">
-        <img
-          src="/footer-grid.svg"
-          alt="grid"
-          className="size-full opacity-70"
-        />
-      </div>
-      <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence to the next level?
-        </h1>
-        <p className="text-center text-white-200 md:mt-10 my-5 lg:max-w-[45vw] ">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
-        </p>
-
-        <Link target="_blank" href="mailto:yogesh.dhengale15@gmail.com">
-          <Button icon={<FaLocationArrow />} position="right">
-            Let&apos;s get in touch
-          </Button>
-        </Link>
-      </div>
-
-      <div className="flex mt-16 md:flex-row flex-col gap-6 justify-between items-center">
-        <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 Yogesh Dhengale
-        </p>
-
-        <div className="flex items-center md:gap-3 gap-6">
-          {socialMedia.map((profile) => (
-            <Link key={profile.id} href={profile.link} target="_blank" className="w-10 h-10 cursor-pointer flex-center backdrop-filter backdrop-blur-lg saturate-200 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
-              <Image
-                src={profile.img}
-                alt={profile.img}
-                width={20}
-                height={20}
-              />
+      <InView
+        variants={{
+          hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
+          visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+        }}
+        viewOptions={{ margin: "0px 0px -100px 0px", once: true }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+      >
+        <div className="text-center max-w-lg mx-auto space-y-5">
+          <p className="text-base text-muted-foreground">
+            Ready to take your digital presence to the next level?
+          </p>
+          <p className="text-lg">
+            Open for full-time roles, collabs, and freelance gigs basically
+            anywhere I can build cool things and bully bugs into submission. If
+            you like great code with a side of comedy, let’s create some digital
+            magic. 🚀
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
+            <Link
+              href="mailto:yogesh.dhengale15@gmail.com?subject=Hiring%20Inquiry&body=Hi%20Yogesh"
+              className="col-span-1"
+            >
+              Hire Me
             </Link>
-          ))}
+            <Link
+              href="/resume.pdf"
+              variant={"outline"}
+              download
+              className="col-span-1"
+            >
+              <FaDownload /> Download Resume
+            </Link>
+          </div>
         </div>
-      </div>
+      </InView>
+      <div
+        role="separator"
+        aria-orientation="horizontal"
+        className="bg-border -mx-1 my-1 h-px mt-16"
+      />
+      <InView
+        variants={{
+          hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
+          visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+        }}
+        viewOptions={{ margin: "0px 0px -100px 0px", once: true }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+      >
+        <div className="space-y-10 my-16">
+          <div className="space-y-5">
+            <p className="text-base text-center text-muted-foreground">
+              Connect with me on
+            </p>
+            <div className="flex justify-center gap-6">
+              {socialMedia.map((item, idx) => (
+                <Link key={idx} href={item.link} size={"icon-lg"}>
+                  <item.Icon />
+                </Link>
+              ))}
+            </div>
+          </div>
+          <p className="text-base text-center text-muted-foreground">
+            © 2024 Yogesh Dhengale. All rights reserved. | Made with ❤️ in India
+          </p>
+        </div>
+      </InView>
     </footer>
   );
 }
