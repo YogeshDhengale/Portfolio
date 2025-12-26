@@ -29,7 +29,7 @@ function Hero() {
             <div>
               <p className="text-lg font-semibold">Yogesh Dhengale</p>
               <p className="text-base text-muted-foreground">
-                Software Engineer
+                Software Engineer 
               </p>
             </div>
           </div>

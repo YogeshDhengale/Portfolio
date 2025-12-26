@@ -67,10 +67,10 @@ function Footer() {
       />
       <InView
         variants={{
-          hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
+          hidden: { opacity: 0, y: 80, filter: "blur(4px)" },
           visible: { opacity: 1, y: 0, filter: "blur(0px)" },
         }}
-        viewOptions={{ margin: "0px 0px -100px 0px", once: true }}
+        viewOptions={{ margin: "0px 0px -80px 0px", once: true }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
         <div className="space-y-10 my-16">

@@ -1,246 +1,256 @@
 export const navItems = [
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Experience", link: "#experience" },
-  { name: "Contact", link: "#contact" },
+  {
+    name: "yogesh.dev",
+    link: "/",
+    className: "font-semibold me-4 text-violet-900",
+  },
+  { name: "About", link: "/#about" },
+  { name: "Work", link: "/projects" },
+  { name: "Resume", link: "/#experience" },
+  // { name: "Contact", link: "#contact" },
 ];
 
-export const gridItems = [
-  {
-    id: 1,
-    title: "I prioritize client collaboration, fostering open communication",
-    description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "size-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
-    spareImg: "",
-  },
-  {
-    id: 2,
-    title: `I'm very flexible with time zone communications.`,
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 3,
-    title: "My tech stack",
-    description: "I’m constantly striving to improve and expand",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-center",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 4,
-    title:
-      "Tech enthusiast passionate about creating innovative digital solutions",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
-  },
+export const projectImagesData = {
+  coffee: [
+    {
+      src: "/project-coffee-1.jpg",
+      className: "aspect-270/559 h-full w-auto",
+      width: 180,
+      height: 342,
+    },
+    {
+      src: "/project-coffee-2.jpg",
+      className: "aspect-270/559 h-full w-auto",
+      width: 180,
+      height: 342,
+    },
+    {
+      src: "/project-coffee-3.jpg",
+      className: "aspect-270/559 h-full w-auto",
+      width: 180,
+      height: 342,
+    },
+    {
+      src: "/project-coffee-4.jpg",
+      className: "aspect-270/559 h-full w-auto",
+      width: 180,
+      height: 342,
+    },
+  ],
+  bookalooza: [
+    {
+      src: "/project-bookalooza-1.jpg",
+      className: "aspect-270/559 h-full w-auto",
+      width: 180,
+      height: 342,
+    },
+    {
+      src: "/project-bookalooza-2.jpg",
+      className: "aspect-270/559 h-full w-auto",
+      width: 180,
+      height: 342,
+    },
+    {
+      src: "/project-bookalooza-3.jpg",
+      className: "aspect-270/559 h-full w-auto",
+      width: 180,
+      height: 342,
+    },
+    {
+      src: "/project-bookalooza-4.jpg",
+      className: "aspect-270/559 h-full w-auto",
+      width: 180,
+      height: 342,
+    },
+    {
+      src: "/project-bookalooza-5.jpg",
+      className: "aspect-270/559 h-full w-auto",
+      width: 180,
+      height: 342,
+    },
+    {
+      src: "/project-bookalooza-6.jpg",
+      className: "aspect-270/559 h-full w-auto",
+      width: 180,
+      height: 342,
+    },
+  ],
+  wemeet: [
+    {
+      src: "/project-wemeet-1.jpg",
+      className: "aspect-270/559 h-full w-auto",
+      width: 180,
+      height: 342,
+    },
+    {
+      src: "/project-wemeet-2.png",
+      className: "aspect-8/5 w-full",
+      width: 704,
+      height: 440,
+    },
+    {
+      src: "/project-wemeet-7.png",
+      className: "aspect-8/5 w-full",
+      width: 704,
+      height: 440,
+    },
+    {
+      src: "/project-wemeet-3.png",
+      className: "aspect-8/5 w-full",
+      width: 704,
+      height: 440,
+    },
+    {
+      src: "/project-wemeet-4.png",
+      className: "aspect-8/5 w-full",
+      width: 704,
+      height: 440,
+    },
+    {
+      src: "/project-wemeet-5.png",
+      className: "aspect-8/5 w-full",
+      width: 704,
+      height: 440,
+    },
+    {
+      src: "/project-wemeet-6.png",
+      className: "aspect-8/5 w-full",
+      width: 704,
+      height: 440,
+    },
+  ],
+  startEase: [
+    {
+      src: "/project-startease-1.png",
+      className: "aspect-8/5 w-full",
+      width: 704,
+      height: 440,
+    },
+    {
+      src: "/project-startease-2.jpg",
+      className: "aspect-270/559 h-full w-auto",
+      width: 180,
+      height: 342,
+    },
+    {
+      src: "/project-startease-3.png",
+      className: "aspect-8/5 w-full",
+      width: 704,
+      height: 440,
+    },
+    {
+      src: "/project-startease-4.png",
+      className: "aspect-8/5 w-full",
+      width: 704,
+      height: 440,
+    },
+    {
+      src: "/project-startease-5.jpg",
+      className: "aspect-270/559 h-full w-auto",
+      width: 180,
+      height: 342,
+    },
+    {
+      src: "/project-startease-6.jpg",
+      className: "aspect-270/559 h-full w-auto",
+      width: 180,
+      height: 342,
+    },
+    {
+      src: "/project-startease-7.jpg",
+      className: "aspect-270/559 h-full w-auto",
+      width: 180,
+      height: 342,
+    },
+  ],
+};
 
-  {
-    id: 5,
-    title:
-      "Currently building a company management app for startups with features like invoice, payment, quote, and customer management, enhanced by animations and 3D elements.",
-    description: "The Inside Scoop",
-    className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
-  },
-  {
-    id: 6,
-    title: "Do you want to start a project together?",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-center w-full text-center",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 7,
-    title: "My Skills",
-    description: "",
-    className: "lg:col-span-5 md:col-span-6 md:row-span-4 lg:min-h-fit",
-    imgClassName: "",
-    titleClassName: "justify-start w-full",
-    img: "",
-    spareImg: "",
-  },
-];
-
-export const skills = [
-  {
-    title: "HTML",
-    img: "/html.svg",
-  },
-  {
-    title: "CSS",
-    img: "/css.svg",
-  },
-  {
-    title: "Javascript",
-    img: "/javascript.svg",
-  },
-  {
-    title: "Typescript",
-    img: "/typescript.svg",
-  },
-  {
-    title: "React.js",
-    img: "/re.svg",
-  },
-  {
-    title: "React Native",
-    img: "/react-native.svg",
-  },
-  {
-    title: "Node.js",
-    img: "/nodejs.svg",
-  },
-  {
-    title: "Next.js",
-    img: "/next.svg",
-  },
-  {
-    title: "Tailwind",
-    img: "/tail.svg",
-  },
-  {
-    title: "Bootstrap",
-    img: "/bootstrap.svg",
-  },
-  {
-    title: "Three.js",
-    img: "/three.svg",
-  },
-  {
-    title: "Framer Motion",
-    img: "/fm.svg",
-  },
-  {
-    title: "MongoDB",
-    img: "/mongo.svg",
-  },
-];
+export interface IProject {
+  id: string;
+  title: string;
+  description: string;
+  images: {
+    src: string;
+    className: string;
+    width: number;
+    height: number;
+  }[];
+}
 
 export const projects = [
   {
-    id: 1,
-    title:
-      "Bookalooza - Empowering Students to Write and Publish Their Own Books",
-    des: "Discover Bookalooza, an AI-powered platform that helps students write, edit, and publish books. Perfect for young authors looking to showcase their creativity and get their books printed.",
-    imgs: ["/"],
-    iconLists: ["/re.svg", "/css.svg", "/javascript.svg", "/three.svg"],
-    link: "https://www.bookalooza.com/",
-  },
-  {
-    id: 2,
-    title: "WeMeet - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/wemeet.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
-  },
-  {
-    id: 3,
-    title: "React Cust Table",
-    des: "A custom lightweight npm package that simplifies the process of writing tables with minimal lines of code. It provides a responsive design, built-in pagination based on the specified page size and support for collapsible rows.",
-    img: "/cust-table.png",
-    iconLists: [
-      "/re.svg",
-      "/nodejs.svg",
-      "/ts.svg",
-      "/rollup.svg",
-      "/styled-components.png",
+    id: "bookaloza-1",
+    title: "Bookalooza - Write, Publish and Earn Online Through Your Books",
+    description:
+      "Bookalooza is a joyful, kid-friendly digital playground where K12 students can write, publish, and sell their very own books—all while earning actual royalties (yes, real money, not chocolate coins). From browsing trending titles to crafting the next bestseller during lunch break, Bookalooza empowers the authors of tomorrow with a fun, intuitive, and beautifully designed platform.",
+    industry: "EdTech / Publishing / Creator Economy",
+    images: projectImagesData.bookalooza,
+    tech: [
+      "React",
+      "TypeScript",
+      "Javascript",
+      "Tailwind",
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "AWS",
+      "Razorpay",
+      "Java",
+      "SpringBoot",
     ],
-    link: "https://www.npmjs.com/package/react-cust-table",
   },
   {
-    id: 4,
-    title: "StartEase – A smooth, simplified solution for startups.",
-    des: "Simplifying startup management with dynamic features, animations, and 3D experiences for an efficient and visually engaging workflow.",
-    img: "/p5.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/",
-  },
-];
-
-export const testimonials = [
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    id: "BrewBuddy-1",
+    title: "BrewBuddy – Your Mobile Coffee Wingman",
+    description:
+      "BrewBuddy is a delightfully addictive mobile app that lets users order coffee faster than their caffeine cravings can kick in. From browsing dreamy cappuccino art to checking out smoother than a fresh latte pour, this app ensures no user ever suffers the tragedy of an empty cup again.",
+    industry: "Food & Beverage / Mobile Commerce",
+    images: projectImagesData.coffee,
+    tech: [
+      "React Native",
+      "TypeScript",
+      "Javascript",
+      "Expo",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+    ],
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    id: "wemeet-1",
+    title: "WeMeet – Where Meetings Actually Make Sense (Mostly.)",
+    description:
+      "WeMeet is a sleek, lightning-fast, browser-based video-meeting platform designed to make online meetings slightly less painful and a whole lot more organized. From instant meetings to personal rooms, recordings, scheduling, and account management, WeMeet brings Zoom-level features without the Zoom-level confusion. If you've ever wanted a meeting app that doesn’t ask for 47 permissions just to turn your mic on — welcome home.",
+    industry: "SaaS / Communication & Collaboration",
+    images: projectImagesData.wemeet,
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Clerk",
+      "GetStream",
+      "Tailwind",
+      "Node.js",
+      "MongoDB",
+    ],
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-];
-
-export const companies = [
-  {
-    id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
-  },
-  {
-    id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
-  },
-  {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
-  },
-  {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
+    id: "startease-1",
+    title: "StartEaseIn – The CRM That Makes Business Feel… Easier (Finally.)",
+    description:
+      "StartEaseIn is a modern, intuitive CRM web application designed to help businesses manage customers, invoices, payments, offers, expenses, and leads without drowning in spreadsheets or existential dread. With a clean dashboard, smart analytics, and beautifully organized modules, StartEaseIn transforms chaotic business data into something surprisingly… understandable. Think of it as the CRM equivalent of a clean desk: peaceful, productive, and oddly satisfying.",
+    industry: "SaaS / Business Management / CRM",
+    images: projectImagesData.startEase,
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind",
+      "Node.js",
+      "MongoDB",
+      "Stripe",
+      "Prisma",
+    ],
   },
 ];
 
@@ -275,7 +285,6 @@ export const workExperience = [
   },
 ];
 
-
 export const projectImages = [
   "/project-coffee-1.jpg",
   "/project-coffee-2.jpg",
@@ -287,5 +296,5 @@ export const projectImages = [
   "/project-bookalooza-4.jpg",
   "/project-bookalooza-5.jpg",
   "/project-bookalooza-6.jpg",
-  "/project-wemeet-1.jpg"
-]
+  "/project-wemeet-1.jpg",
+];
