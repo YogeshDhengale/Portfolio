@@ -42,8 +42,15 @@ const TECH_ICON_MAP: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   prisma: Prisma,
 };
 
-async function page({ params }: { params: Promise<{ id: string }> }) {
-  const id = (await params).id;
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    id: project.id,
+  }));
+}
+
+async function page({ params }: { params: { id: string } }) {
+  const { id } = params;
+
   const project = projects.find((proj) => proj.id === id);
 
   if (!project) {
