@@ -20,8 +20,12 @@ import { Code, Globe } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
+import type { ComponentType, SVGProps } from "react";
 
-const TECH_ICON_MAP: Record<string, React.ComponentType<any>> = {
+const TECH_ICON_MAP: Record<
+  string,
+  ComponentType<SVGProps<SVGSVGElement>>
+> = {
   react: ReactLight,
   "next.js": NextjsLogoDark,
   typescript: Typescript,
