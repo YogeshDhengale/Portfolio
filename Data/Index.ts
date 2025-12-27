@@ -183,8 +183,11 @@ export const projects = [
     title: "Bookalooza - Write, Publish and Earn Online Through Your Books",
     description:
       "Bookalooza is a joyful, kid-friendly digital playground where K12 students can write, publish, and sell their very own books—all while earning actual royalties (yes, real money, not chocolate coins). From browsing trending titles to crafting the next bestseller during lunch break, Bookalooza empowers the authors of tomorrow with a fun, intuitive, and beautifully designed platform.",
-    industry: "EdTech / Publishing / Creator Economy",
+    industry: "EdTech (E-Learning)",
     images: projectImagesData.bookalooza,
+    role: "Lead Software Engineer",
+    link: "https://www.bookalooza.com",
+    gitLink: null,
     tech: [
       "React",
       "TypeScript",
@@ -200,29 +203,15 @@ export const projects = [
     ],
   },
   {
-    id: "BrewBuddy-1",
-    title: "BrewBuddy – Your Mobile Coffee Wingman",
-    description:
-      "BrewBuddy is a delightfully addictive mobile app that lets users order coffee faster than their caffeine cravings can kick in. From browsing dreamy cappuccino art to checking out smoother than a fresh latte pour, this app ensures no user ever suffers the tragedy of an empty cup again.",
-    industry: "Food & Beverage / Mobile Commerce",
-    images: projectImagesData.coffee,
-    tech: [
-      "React Native",
-      "TypeScript",
-      "Javascript",
-      "Expo",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-    ],
-  },
-  {
     id: "wemeet-1",
     title: "WeMeet – Where Meetings Actually Make Sense (Mostly.)",
     description:
       "WeMeet is a sleek, lightning-fast, browser-based video-meeting platform designed to make online meetings slightly less painful and a whole lot more organized. From instant meetings to personal rooms, recordings, scheduling, and account management, WeMeet brings Zoom-level features without the Zoom-level confusion. If you've ever wanted a meeting app that doesn’t ask for 47 permissions just to turn your mic on — welcome home.",
-    industry: "SaaS / Communication & Collaboration",
+    industry: "SaaS (Video Meetings)",
     images: projectImagesData.wemeet,
+    role: "Full Stack Developer",
+    link: "https://wemeetvideo.vercel.app/",
+    gitLink: "https://github.com/YogeshDhengale/WeMeet.git",
     tech: [
       "Next.js",
       "TypeScript",
@@ -235,12 +224,35 @@ export const projects = [
     ],
   },
   {
+    id: "BrewBuddy-1",
+    title: "BrewBuddy – Your Mobile Coffee Wingman",
+    description:
+      "BrewBuddy is a delightfully addictive mobile app that lets users order coffee faster than their caffeine cravings can kick in. From browsing dreamy cappuccino art to checking out smoother than a fresh latte pour, this app ensures no user ever suffers the tragedy of an empty cup again.",
+    industry: "SaaS (Food & Beverage)",
+    images: projectImagesData.coffee,
+    role: "Design Engineer",
+    link: null,
+    gitLink: "https://github.com/YogeshDhengale/BrewBuddy.git",
+    tech: [
+      "React Native",
+      "TypeScript",
+      "Javascript",
+      "Expo",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+    ],
+  },
+  {
     id: "startease-1",
     title: "StartEaseIn – The CRM That Makes Business Feel… Easier (Finally.)",
     description:
       "StartEaseIn is a modern, intuitive CRM web application designed to help businesses manage customers, invoices, payments, offers, expenses, and leads without drowning in spreadsheets or existential dread. With a clean dashboard, smart analytics, and beautifully organized modules, StartEaseIn transforms chaotic business data into something surprisingly… understandable. Think of it as the CRM equivalent of a clean desk: peaceful, productive, and oddly satisfying.",
-    industry: "SaaS / Business Management / CRM",
+    industry: "SaaS (CRM)",
     images: projectImagesData.startEase,
+    link: null,
+    gitLink: "https://github.com/YogeshDhengale/StartEase.git",
+    role: "Full Stack Developer",
     tech: [
       "Next.js",
       "TypeScript",

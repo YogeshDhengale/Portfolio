@@ -6,6 +6,8 @@ interface IProjectProp {
   id: string;
   title: string;
   description: string;
+  gitLink: string | null;
+  liveLink?: string | null;
   images: {
     src: string;
     className: string;
