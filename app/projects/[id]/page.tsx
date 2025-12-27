@@ -22,10 +22,7 @@ import { notFound } from "next/navigation";
 import React from "react";
 import type { ComponentType, SVGProps } from "react";
 
-const TECH_ICON_MAP: Record<
-  string,
-  ComponentType<SVGProps<SVGSVGElement>>
-> = {
+const TECH_ICON_MAP: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   react: ReactLight,
   "next.js": NextjsLogoDark,
   typescript: Typescript,
@@ -71,28 +68,28 @@ async function page({ params }: { params: Promise<{ id: string }> }) {
             {`${project.description}`}
           </p>
           <div>
-          <div className="flex gap-4 flex-wrap">
-            {project.link && (
-              <Link
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex gap-2 items-center px-4 py-2 rounded-full border border-border hover:bg-accent text-muted-foreground hover:text-foreground transition-colors text-base font-medium [&>svg]:size-4 [&>svg]:mr-2"
-              >
-                Live At <Globe />
-              </Link>
-            )}
-            {project.gitLink && (
-              <Link
-                href={project.gitLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex gap-2 items-center px-4 py-2 rounded-full border border-border hover:bg-accent text-muted-foreground hover:text-foreground transition-colors text-base font-medium [&>svg]:size-4 [&>svg]:mr-2"
-              >
-                GitHub <GithubLight />
-              </Link>
-            )}
-          </div>
+            <div className="flex gap-4 flex-wrap">
+              {project.link && (
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex gap-2 items-center px-4 py-2 rounded-full border border-border hover:bg-accent text-muted-foreground hover:text-foreground transition-colors text-base font-medium [&>svg]:size-4 [&>svg]:mr-2"
+                >
+                  Live At <Globe />
+                </Link>
+              )}
+              {project.gitLink && (
+                <Link
+                  href={project.gitLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex gap-2 items-center px-4 py-2 rounded-full border border-border hover:bg-accent text-muted-foreground hover:text-foreground transition-colors text-base font-medium [&>svg]:size-4 [&>svg]:mr-2"
+                >
+                  GitHub <GithubLight />
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </InView>

@@ -17,13 +17,13 @@ function page() {
         >
           <div className="space-y-8">
             <h1 className="font-bold text-2xl mb-3 leading-tight">
-              My Selected Works '23 - 'Present
+              My Selected Works &apos;23 - &apos;Present
             </h1>
             <p className="text-base text-muted-foreground max-w-2xl">
               My journey in development has taught me a lot especially when it
               comes to designing and building impactful user interfaces. While
-              I’ve struggled at times, those challenges have shaped my skills
-              and helped me successfully deliver multiple projects. I don’t
+              I&apos;ve struggled at times, those challenges have shaped my skills
+              and helped me successfully deliver multiple projects. I don&apos;t
               claim that my past work is the best, but I stand by my commitment
               to continuous improvement. With the right opportunity, I am
               confident I can create even more refined, intuitive, and
