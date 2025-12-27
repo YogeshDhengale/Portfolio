@@ -61,10 +61,10 @@ async function page({ params }: { params: Promise<{ id: string }> }) {
       >
         <div className="space-y-6">
           <h1 className="font-bold text-2xl mb-3 leading-tight">
-            {project.title}
+            {`${project.title}`}
           </h1>
           <p className="text-base text-muted-foreground">
-            {project.description}
+            {`${project.description}`}
           </p>
           <div>
           <div className="flex gap-4 flex-wrap">
@@ -110,7 +110,7 @@ async function page({ params }: { params: Promise<{ id: string }> }) {
             <div>
               <h2 className="font-bold text-lg leading-tight">Industry</h2>
               <p className="text-sm text-muted-foreground">
-                {project.industry}
+                {`${project.industry}`}
               </p>
             </div>
             <div>
