@@ -35,8 +35,8 @@ const ProductCarousel = ({
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="left-1" onClick={(e) => e.stopPropagation()} />
-      <CarouselNext className="right-1" onClick={(e) => e.stopPropagation()} />
+      <CarouselPrevious className="left-1" />
+      <CarouselNext className="right-1" />
     </Carousel>
   );
 };
