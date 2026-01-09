@@ -272,7 +272,7 @@ export const workExperience = [
     logo: "/logo-bookalooza.png",
     title: "Lead Software Engineer",
     company: "Orange Vtech PVT. LTD.",
-    duration: "May'2025 - Present*",
+    duration: "May'2024 - Present*",
     location: "Delhi, India - on-site",
     desc: [
       "*Improved system performance by 25%* by identifying and optimizing bottlenecks in component rendering and network communication across a large-scale IoT environment consisting of over *10,000 connected devices*, resulting in faster data transmission and reduced downtime.",
@@ -286,7 +286,7 @@ export const workExperience = [
     logo: "/logo-vir-softech.png",
     title: "Software Engineer",
     company: "Vir Softech PVT. LTD.",
-    duration: "May'2022 - Apr'2024",
+    duration: "May'2023 - Apr'2024",
     location: "Noida, India - on-site",
     desc: [
       "*Accelerated UI development by 35%* by implementing a scalable, *component-based architecture using React and Redux*, significantly reducing repetitive code, enabling reusability, and improving maintainability across multiple features and modules.",
